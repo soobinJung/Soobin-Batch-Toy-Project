@@ -1,5 +1,15 @@
 package com.soobin.toyproject.SoobinBatchToyProject.process;
 
-public class SoobinTasklet {
+import org.springframework.core.task.TaskExecutor;
+import org.springframework.stereotype.Component;
 
+//@Component
+public class SoobinTasklet implements TaskExecutor {
+
+    @Override
+    public void execute(Runnable task) {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>> Tasklet");
+
+//        task.run();
+    }
 }
