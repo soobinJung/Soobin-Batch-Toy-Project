@@ -15,7 +15,6 @@ public class SoobinReader {
     private final DataSource dataSource;
 
     public ItemReader<SoobinDto> reader() {
-
         JdbcCursorItemReader<SoobinDto> reader = new JdbcCursorItemReader<>();
         reader.setDataSource(this.dataSource);
         reader.setSql("SELECT id, name FROM SOOBIN");
